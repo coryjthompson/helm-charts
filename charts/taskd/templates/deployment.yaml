@@ -1,0 +1,41 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskd
+spec:
+  selector:
+    matchLabels:
+      app: taskd
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: taskd
+    spec:
+      terminationGracePeriodSeconds: 5
+      containers:
+      - name: taskd
+        image: x4121/taskd:v0.2.0
+        imagePullPolicy: "Always"
+        env:
+          - name: CERT_CN
+            value: {{ .Values.taskd.cert.CN }}
+          - name: CERT_ORGANIZATION
+            value: {{ .Values.taskd.cert.ORGANIZATION }}
+          - name: CERT_COUNTRY
+            value: {{ .Values.taskd.cert.COUNTRY }}
+          - name: CERT_STATE
+            value: {{ .Values.taskd.cert.STATE }}
+          - name: CERT_LOCALITY
+            value: {{ .Values.taskd.cert.LOCALITY }}
+        volumeMounts:
+        - name: taskd-data
+          mountPath: /var/taskd
+      restartPolicy: Always
+      {{- if .Values.persistence.enabled }}
+      volumes:
+      - name: "taskd-data"
+        persistentVolumeClaim:
+          claimName: {{ if .Values.persistence.existingClaim }}{{ .Values.persistence.existingClaim }}{{- end }}
+      {{- end }}

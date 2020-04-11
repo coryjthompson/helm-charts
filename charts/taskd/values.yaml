@@ -1,0 +1,12 @@
+---
+taskd:
+  cert:
+    CN: "taskd"
+    ORGANIZATION: "Some Org"
+    COUNTRY: "AU"
+    STATE: "NSW"
+    LOCALITY: "Sydney"
+
+persistence:
+  enabled: false
+  #existingClaim: ""
