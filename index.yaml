@@ -3,11 +3,21 @@ entries:
   monica:
   - apiVersion: v2
     appVersion: 2.17.0
-    created: "2020-04-11T05:41:50.396847095Z"
+    created: "2020-04-11T09:53:12.417907012Z"
     description: Monica lets you remember everything about your loved ones.
     digest: f74bc4870a275e92084d37a789776ae57aaecfd6cfa44f4e2a4d1dc78c47af71
     name: monica
     urls:
     - https://github.com/coryjthompson/helm-charts/releases/download/monica-0.1.0/monica-0.1.0.tgz
     version: 0.1.0
-generated: "2020-04-11T05:41:49.745683962Z"
+  taskd:
+  - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2020-04-11T09:53:12.207930583Z"
+    description: Task warrior server
+    digest: cad43b6bd4f7d67a7749b7afc0d523226181687307ba22ad81bd0309583a7945
+    name: taskd
+    urls:
+    - https://github.com/coryjthompson/helm-charts/releases/download/taskd-0.1.0/taskd-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-04-11T09:53:11.604725622Z"
