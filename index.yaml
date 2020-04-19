@@ -3,7 +3,7 @@ entries:
   monica:
   - apiVersion: v2
     appVersion: 2.17.0
-    created: "2020-04-19T02:58:39.625808112Z"
+    created: "2020-04-19T03:03:17.022583267Z"
     description: Monica lets you remember everything about your loved ones.
     digest: f74bc4870a275e92084d37a789776ae57aaecfd6cfa44f4e2a4d1dc78c47af71
     name: monica
@@ -13,7 +13,32 @@ entries:
   nextcloud:
   - apiVersion: v1
     appVersion: 17.0.0
-    created: "2020-04-19T02:58:39.126420827Z"
+    created: "2020-04-19T03:03:15.864805022Z"
+    description: A file sharing server that puts the control and security of your
+      own data back into your hands.
+    digest: 2b617ef210789ef351ac968f7bf85705b7e392fe9b7e31f9efa510af338374b2
+    home: https://nextcloud.com/
+    icon: https://cdn.rawgit.com/docker-library/docs/defa5ffc7123177acd60ddef6e16bddf694cc35f/nextcloud/logo.svg
+    keywords:
+    - nextcloud
+    - storage
+    - http
+    - web
+    - php
+    maintainers:
+    - email: christian.ingenhaag@googlemail.com
+      name: chrisingenhaag
+    - email: jeff@billimek.com
+      name: billimek
+    name: nextcloud
+    sources:
+    - https://github.com/nextcloud/docker
+    urls:
+    - https://github.com/coryjthompson/helm-charts/releases/download/nextcloud-1.9.5/nextcloud-1.9.5.tgz
+    version: 1.9.5
+  - apiVersion: v1
+    appVersion: 17.0.0
+    created: "2020-04-19T03:03:16.032452889Z"
     description: A file sharing server that puts the control and security of your
       own data back into your hands.
     digest: 38121a4f75f1611316f810bbe434d7531ccfe204493495c254dd6c42987964ed
@@ -38,7 +63,7 @@ entries:
     version: 1.9.4
   - apiVersion: v1
     appVersion: 17.0.0
-    created: "2020-04-19T02:58:39.276348688Z"
+    created: "2020-04-19T03:03:16.611903884Z"
     description: A file sharing server that puts the control and security of your
       own data back into your hands.
     digest: 4afb4ce1cb6549ce02bae211f6b1806945360543cbb5e4526ead5890d3305d84
@@ -64,11 +89,11 @@ entries:
   taskd:
   - apiVersion: v2
     appVersion: 0.2.0
-    created: "2020-04-19T02:58:39.465793475Z"
+    created: "2020-04-19T03:03:16.845687722Z"
     description: Task warrior server
     digest: cad43b6bd4f7d67a7749b7afc0d523226181687307ba22ad81bd0309583a7945
     name: taskd
     urls:
     - https://github.com/coryjthompson/helm-charts/releases/download/taskd-0.1.0/taskd-0.1.0.tgz
     version: 0.1.0
-generated: "2020-04-19T02:58:38.658641845Z"
+generated: "2020-04-19T03:03:15.387957173Z"
