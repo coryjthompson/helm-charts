@@ -216,6 +216,9 @@ spec:
         - name: nextcloud-data
           mountPath: /var/www/html/themes
           subPath: {{ ternary "themes" (printf "%s/%s" .Values.nextcloud.persistence.subPath "themes") (empty .Values.nextcloud.persistence.subPath) }}
+        - name: nextcloud-version
+          mounthPath: /var/www/html/version.php
+          subPath: {{ ternary "config/version.php" (printf "%s/%s" .Values.nextcloud.persistence.subPath "config") (empty .Values.nextcloud.persistence.subPath) }}
         {{- range $key, $value := .Values.nextcloud.configs }}
         - name: nextcloud-config
           mountPath: /var/www/html/config/{{ $key }}
